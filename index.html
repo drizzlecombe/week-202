@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Andrew Watson">
+        <title>CARES Winlink Net Week 175 checkins</title>
+
+        <style>
+            body {
+                /* font-family: Roboto, Helvetica, Arial, sans-serif; */
+                font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 1rem;
+                font-weight:400;
+                color: #1a1a1a;
+                background-image: none;
+                background: #e8e8e8;
+
+                /* auto margins centre this container within its parent */
+
+                /* border: thin solid red; */
+                margin-left: auto;
+                margin-right: auto;
+                width: 70%;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                padding-left: 40px;
+                padding-right: 40px;
+                padding-bottom: 40px;
+            }
+
+            /* Apply these styles when the browser width is 768px or less (tablets/mobiles) */
+            @media (max-width: 768px) {
+                body {
+                    width: 80%; /* Smaller margin for smaller screens */
+                }
+            }
+
+            /* Apply these styles when the browser width is 480px or less (mobiles) */
+            @media (max-width: 480px) {
+                body {
+                    width: 90%; /* Even smaller margin for very small screens */
+            }
+}
+            
+            div#n1acw_container {
+                overflow: auto;
+                border: thin solid red;
+            }
+
+            h1, h2 {
+                color: rgb(60, 60, 60);
+                font-weight: bold;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                margin-top: 20px;
+                margin-bottom: 5px;
+            }
+
+            textarea {
+                font-size: 90%;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            div.auxc-checkin {
+                background-color: #F0F0F0;
+                border: thin solid darkgrey;
+                border-radius: 10px;
+                padding-left: 5%;
+                padding-right: 5%;
+                /* padding-bottom: 40px; */
+                margin-top: 20px;
+                overflow: hidden;
+            }
+
+            div.exercise-requirements {
+                /* background-color: lightgrey; */
+                border: thin solid darkgrey;
+                border-radius: 10px;
+                padding-right: 5%;
+                margin-top: 20px;
+                font-size: 1rem;
+            }
+            
+            div.exercise-requirements li {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .checkin-sentence {
+                font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                /* font-family: Roboto, Helvetica, Arial, sans-serif; */
+                /* font-family: Courier New, monospace; */
+                color: darkgreen;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: left;
+                text-transform: uppercase;
+            }
+            .broken-checkin {
+                font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                /* font-family: Roboto, Helvetica, Arial, sans-serif; */
+                /* font-family: Courier New, monospace; */
+                color: darkred;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: left;
+                text-transform: uppercase;
+            }
+            .under-review {
+                font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                /* font-family: Roboto, Helvetica, Arial, sans-serif; */
+                /* font-family: Courier New, monospace; */
+                color: darkred;
+                font-size: 0.6rem;
+                font-weight: bold;
+                text-align: left;
+                text-transform: uppercase;
+            }
+
+            .utility_thumbnail, .submitted_image {
+                border-style:none;
+                float:none;
+                padding-left: 50px;
+                /* padding-right: 20px; */
+                padding-top: 0px;
+                padding-bottom: 20px; 
+            }
+            .utility_thumbnail_right, .submitted_image_right {
+                border-style:none;
+                float:right;
+                padding-left: 20px;
+                padding-right: 0px;
+                padding-top: 0px;
+                padding-bottom: 20px; 
+            }
+
+            .utility_thumbnail_left, .submitted_image_left {
+                border-style:none;
+                float:left;
+                padding-left: 0px;
+                padding-right: 20px;
+                padding-top: 0px;
+                padding-bottom: 20px; 
+            }            
+            .utility_thumbnail:hover,
+            .utility_thumbnail_right:hover,
+            .utility_thumbnail_left:hover {
+                transform: scale(1.05);
+            }
+
+            #jump-to-AUXC-block {
+                display: flex;
+                align-items: center; 
+            }
+
+            #AUXC-jump-paragraph {
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            #AUXC-select-list {
+                display: inline-block;
+            }
+        </style>
+
+        <script>
+            function jumpToAUXC() {
+                const selectElement = document.getElementById("AUXC-select-list");
+                const selectedValue = selectElement.value;
+
+                if(selectedValue) { // Only jump if a valid option is selected
+                    window.location.hash = selectedValue;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>CARES Winlink Net: Week 175 Exercise</h1>
+
+        <p>Your teammates' exercise material is below. You should see the
+        contents of the ICS 213s that they filled out. Each AUXC who submitted a
+        map image should have that linked. 
+<!--        
+        <p> If latitude and longitude were included, I've linked to a map to
+        show the power pole footing or the hydrant reported on.</p>
+        -->
+
+        <p>All other simple check-ins have been recorded, so if you do not see
+        your check-in sentence - rest assured: I have it and it has been added
+        to the roster list for week 175.</p>
+
+        <p> Your exercise requirements this week were to:</p>
+        <div class="exercise-requirements">
+            <ul>
+                <li>set the RECEIVING tactical address is CLACKAMAS-WEEKLYNET.</li>
+                
+                <ll>complete your check-in using an ICS 213 form. Note that this
+                is an exercise by setting the appropriate field in the 213. The
+                incident name and subject will be: CARES Winlink Net no. 175</li>
+                
+                <li>set the From: field in the 213. The message is from George
+                Ford who is an ODOT supervisor.</li>
+                
+                <li>address the message to Jessica Gonzalez who is a traffic
+                control analyst in the planning section. This is the To: field.</li>
+                
+                <li>George Ford approves his own message.</li>
+                
+                <li>send one Winlink check-in only using either VARA FM, packet or
+                Telnet via Starlink.</li>
+                
+                <li>enter the correctly formed check-in sentence in the ICS 213's message
+                section.</li>                
+                
+                <li>identify a traffic light controlled road intersection near
+                your operating location. Record the names of the intersecting
+                roads in your ICS 213 along with decimal latitude and longitude
+                to four decimal places.</li>
+                
+                <li>Using your mapping application (Google maps, Open Street Map, etc),
+                grab a small screen shot showing the intersection. Do not use satellite
+                view. JPEG format.</li>
+            </ul>
+        </div>
+
+
+        <h2>Individual AUXCs' prescribed check-ins with a JPEG image</h2>
+
+        <p>Note that if an AUXC checked in through multiple RMSs, then each check-in
+            sentence is provided at the top of their information.</p>
+        <div id="jump-to-AUXC-block">
+            <p id="AUXC-jump-paragraph">Jump to a specific AUXC's check-in material:</p>
+
+            <select id=AUXC-select-list onchange="jumpToAUXC()">
+                <option value="">Select an AUXC</option>
+                <option value="AUXC_AD7EF">AD7EF</option>
+                <!-- <option value="AUXC_AI7XM">AI7XM</option> -->
+                <option value="AUXC_K7QQB">K7QQB</option>
+                <option value="AUXC_K7VBY">K7VBY</option>
+                <option value="AUXC_KC7TAK">KC7TAK</option>
+                <option value="AUXC_KC7ZZX">KC7ZZX</option>
+                <option value="AUXC_KD7DNM">KD7DNM</option>
+                <!--<option value="AUXC_KD7ISA">KD7ISA</option> -->
+                <option value="AUXC_KD7PFH">KD7PFH</option>
+                <option value="AUXC_KE7WNB">KE7WNB</option>
+                <option value="AUXC_KF7KXX">KF7KXX</option>
+                <option value="AUXC_KG7WKK">KG7WKK</option>
+                <option value="AUXC_KI7BDP">KI7BDP</option>
+                <option value="AUXC_KI7DGC">KI7DGC</option>
+                <option value="AUXC_KI7FCG">KI7FCG</option>
+                <option value="AUXC_KI7LAG">KI7LAG</option>
+                <option value="AUXC_KI7MDE">KI7MDE</option>
+                <option value="AUXC_KI7O">KI7O</option>
+                <option value="AUXC_KI7QIB">KI7QIB</option>
+                <option value="AUXC_KJ7JCR">KJ7JCR</option>
+                <option value="AUXC_KJ7MLK">KJ7MLK</option>
+                <option value="AUXC_KK6OTP">KK6OTP</option>
+                <!--<option value="AUXC_KK7AOY">KK7AOY</option> -->
+                <option value="AUXC_KK7MLS">KK7MLS</option>
+                <option value="AUXC_KK7ZTC">KK7ZTC</option>
+                <option value="AUXC_N1ACW">N1ACW</option>
+                <option value="AUXC_W6RKT">W6RKT</option>
+                <option value="AUXC_W7CRI">W7CRI</option>
+                <!--<option value="AUXC_W7PDQ">W7PDQ</option>-->
+                <option value="AUXC_W7TEE">W7TEE</option>
+                <option value="AUXC_WA6ZLV">WA6ZLV</option>
+                <option value="AUXC_WW7OR">WW7OR</option>
+            </select>
+        </div>
+
+    <!--
+        <div class="auxc-checkin" id="AUXC_CALLSIGN">
+            <p class="checkin-sentence">
+                CHECK-IN 
+            </p>
+            <a href="./images/CALLSIGN.jpg" target="_blank">Open supplied map image in a separate tab</a>
+
+            <p><strong>Message text:</strong></p>
+            <pre>
+            
+            </pre>
+        </div>
+    -->
+
+        <div class="auxc-checkin" id="AUXC_AD7EF">
+            <p class="checkin-sentence">
+                175, AD7EF, VARA FM, KI7BDP-10, 50.700, OREGON CITY, CLACKAMAS, OREGON
+            </p>
+            <a href="./images/AD7EF.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez / traffic control analyst, planning section
+3. From (Name and Position): George Ford / ODOT supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-05
+6. Time: 20:29
+7. Message:
+
+175, AD7EF, VARA FM, KI7BDP-10, 50.700, OREGON CITY, CLACKAMAS, OREGON
+
+The attached picture shows the Google Maps graphic for the (Oregon City, OR) traffic-control signal where Redland Road
+crosses the junction of Abernethy Road (from the west) and Holcomb Blvd (from the east).
+
+The coordinates of this intersection are 45.3645, -122.5871
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_K7QQB">
+            <p class="checkin-sentence">
+                175, K7QQB, VARA FM, W7OWO-10, 145.030, AURORA, CLACKAMAS, OREGON
+            </p>
+            <a href="./images/K7QQB.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez/traffic control analyst, planning section
+3. From (Name and Position): George Ford/ODOT supervisor
+4. Subject: CARES Winlink Net no.175
+5. Date: 2026-03-04
+6. Time: 16:19
+7. Message:
+
+175, K7QQB, VARA FM, W7OWO-10, 145.030, AURORA, CLACKAMAS, OREGON
+
+Traffic light at intersection of SW Wilsonville Rd and Rebekah St.
+Lat and Long coordinates: 45.3029, -122.7622
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_K7VBY">
+            <p class="broken-checkin">
+                175, K7VBY, VARA FM, K7MCE-10, 145.070, OAK GROVE, CLACKAMAS, OREGON
+            </p>
+            <p class="under-review">Two attempts made to check-in. Original frequency not to specification.</p>
+            <a href="./images/K7VBY.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez, traffic control analyst
+3. From (Name and Position): George Ford, ODOT supervosor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-05
+6. Time: 13:29
+7. Message:
+
+175, K7VBY, VARA FM, K7MCE-10, 145.070, OAK GROVE, CLACKAMAS, OREGON
+
+River Road and McLoughlin Blvd: 45.4373, -122.6399
+
+Many signals and streets intersect.
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KC7TAK">
+            <p class="checkin-sentence">
+                175, KC7TAK/M, TELNET, STARLINK, 0.000, Clarkes, Clackamas, Oregon
+            </p>
+            <a href="./images/KC7TAK.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez / Traffic Control Analyst /Planning Section
+3. From (Name and Position): George Ford / ODOT Supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-08
+6. Time: 10:50
+7. Message:
+
+175, KC7TAK/M, TELNET, STARLINK, 0.000, Clarkes, Clackamas, Oregon
+
+S Beavercreek Rd and S Henrici Rd: 45.3101, -122.5477
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KC7ZZX">
+            <p class="broken-checkin">
+                175, KC7ZZX, VARA FM, KC7ZDO-11, 145.770, Wilsonville, Clackamas, Oregon
+            </p>
+            <p class="under-review">
+                Tactical address CLACKAMAS-WK175 not used.
+            </p>
+            <a href="./images/KC7ZZX.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez / traffic control analyst, Planning Section
+3. From (Name and Position): George Ford / ODOT supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-09
+6. Time: 17:19
+7. Message:
+
+175, KC7ZZX, VARA FM, KC7ZDO-11, 145.770, Wilsonville, Clackamas, Oregon
+
+SW Wilsonville Road and SW Meadows Loop: 45.3075, -122.7493
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KD7DNM">
+            <p class="broken-checkin">
+                175, KD7DNM, VARA FM, N1ACW-10, 145.530, Lake Oswego, Clackamas, OR
+            </p>
+            <p>
+                <p class="under-review">Section 3 requires name and position. There could be staff members sharing the same name. It happens!</p>
+            </p>
+            <a href="./images/KD7DNM.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: Clackamas Winlink Net 175
+2. To (Name and Position): Jessica Gonzalez, Traffic Control Analyst
+3. From (Name and Position): George Ford
+4. Subject: Bryant and Jean Road Intersection
+5. Date: 2026-03-09
+6. Time: 18:22
+7. Message:
+
+Bryant Road and Jean Road: 45.3971, -122.7230
+
+Image of intersection attached.
+
+175, KD7DNM, VARA FM, N1ACW-10, 145.530, Lake Oswego, Clackamas, OR
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KD7PFH">
+            <p class="broken-checkin">
+                175, KD7PFH, Telnet, N/A, 0.000, Lake Oswego, Clackamas, OR
+            </p>
+            <p class="under-review">Misspelled Jessica Gonzalez's name in the To: field.</p>
+            <a href="./images/KD7PFH.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Weekly Winlink 175
+2. To (Name and Position): Jessica Gonzales, traffic control analyst, planning
+3. From (Name and Position): George Ford, ODOT Supervisor
+4. Subject: Pilkington Road & Jean Roadtraffic light location
+5. Date: 2026-03-09
+6. Time: 20:01
+7. Message:
+
+Intersection photo Pilkington Road & Jean Road
+45.3971, -122.7335
+
+175, KD7PFH, Telnet, N/A, 0.000, Lake Oswego, Clackamas, OR
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KE7WNB">
+            <p class="broken-checkin">
+                175, KE7WNB, VARA FM, KD7ZDO-11, 145,770, Milwaukie, Clackamas, Oregon
+            </p>
+            <p class="under-review">Misspelled Jessica Gonzalez's name in the To: field.</p>
+            <p class="under-review">Comma in frequency rather than decimal point.</p>
+            <a href="./images/KE7WNB.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net No. 175
+2. To (Name and Position): Jessica Gonzales / Traffic control analyst
+3. From (Name and Position): George Ford / ODOT supervisor
+4. Subject: CARES Winlink net no. 175
+5. Date: 2026-03-08
+6. Time: 20:28
+7. Message:
+
+175, KE7WNB, VARA FM, KD7ZDO-11, 145,770, Milwaukie, Clackamas, Oregon
+
+SE Lake Rd and hwy 224 eastbound on/off ramp: 45.4308, -122.6111
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KF7KXX">
+            <p class="broken-checkin">
+                175, KF7KXX, Telnet, Starlink, N/A, Blanding, San Juan, Utah
+            </p>
+            <p class="under-review">Non-conforming check-in sentence. Missing /M for STARLINK.</p>
+            <p class="under-review">Non-conforming check-in sentence. Frequency missing (0.000).</p>
+            <p class="under-review">Incorrect image format: PNG when JPEG was requested.</p>
+            <p class="under-review">Misspelled George Ford's name in the Approved by field.</p>
+            <p class="under-review">Misspelled Jessica Gonzalez's name in the To: field.</p>
+            <a href="./images/KF7KXX.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net No. 175
+2. To (Name and Position): Jessica Gonzales, Traffic Control Analyst, Planning Section
+3. From (Name and Position): George Ford, ODOT Supervisor
+4. Subject: CARES Winlink Net No. 175
+5. Date: 2026-03-06
+6. Time: 08:22
+7. Message:
+
+175, KF7KXX, Telnet, Starlink, N/A, Blanding, San Juan, Utah
+
+There is no stoplight in Blanding.
+
+Attached is a snippet of the stop sign intersection at the intersection of N. Main Street and Center Street.
+
+37.6254, -109.4780
+
+8. Approved by: George Fork
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KG7WKK">
+            <p class="checkin-sentence">
+                175, KG7WKK, VARA FM, N1ACW-10, 145.530, Lake Oswego, Clackamas, Oregon
+            </p>
+            <a href="./images/KG7WKK.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez / Traffic control analyst, Planning section
+3. From (Name and Position): George Ford / ODOT supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-07
+6. Time: 22:56
+7. Message:
+
+175, KG7WKK, VARA FM, N1ACW-10, 145.530, Lake Oswego, Clackamas, Oregon
+
+Westlake Drive and Kruse Way: 45.2508, -122.4354
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KI7BDP">
+            <p class="checkin-sentence">
+                175, KI7BDP, VARA FM, KD7ZDO-12, 441.525, OREGON CITY, CLACKAMAS, OR
+            </p>
+            <p class="broken-checkin">
+                175, KI7BDP, VARA FM, KI7BDP-10, 50.700, OREGON CITY, CLACKAMAS, OR
+            </p>
+            <p class="under-review">Incident Name field not filled out</p>
+            <p class="under-review">Map - no street names - could be anywhere!</p>
+            <a href="./images/KI7BDP.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name:
+2. To (Name and Position): Jessica Gonzalez, Planning / traffic control analyst
+3. From (Name and Position): George Ford, ODOT Supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-05
+6. Time: 15:33
+7. Message:
+
+175, KI7BDP, VARA FM, KI7BDP-10, 50.700, OREGON CITY, CLACKAMAS, OR
+
+Molalla Avenue and Clairmont Way 45.3312, -122.5863.
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KI7DGC">
+            <p class="checkin-sentence">
+                175, KI7DGC, VARA FM, W7YAM-12, 145.090, Lake Oswego, Clackamas, Oregon
+            </p>
+            <a href="./images/KI7DGC.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez/Planning Section-Traffic Control Analyst
+3. From (Name and Position): George Ford/ODOT Supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-04
+6. Time: 11:24
+7. Message:
+
+175, KI7DGC, VARA FM, W7YAM-12, 145.090, Lake Oswego, Clackamas, Oregon
+
+Attached File:
+Intersection of Kruse Way at Kruse Oaks Dr
+45.4195, -122.7392
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KI7FCG">
+            <p class="broken-checkin">
+                175, KI7FCG, VARA FM, KD7ZDO-11, 145.770, BORING, CLACKAMAS, OR
+            </p>
+            <p class="under-review">No map image provided.</p>
+            <p class="under-review">No intersection identified and coordinates missing.</p>
+            <a href="./images/image_error.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez
+3. From (Name and Position): George Ford
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-05
+6. Time: 11:32
+7. Message:
+
+175, KI7FCG, VARA FM, KD7ZDO-11, 145.770, BORING, CLACKAMAS, OR
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KI7LAG">
+            <p class="broken-checkin">
+                175, KI7LAG, VARA FM, W7BVT-10, 140.020, Beaverton, Washington, OR
+            </p>
+            <p class="under-review">George Ford position (title) not given in the From: field</p>
+            <p class="under-review">Neither incident name nor subject match requirement.</p>
+            <a href="./images/KI7LAG.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Week 175
+2. To (Name and Position): Jessica Gonzalez, Traffic Control Planning Section
+3. From (Name and Position): George Ford
+4. Subject: CARES Winlink Check-In Week 175
+5. Date: 2026-03-08
+6. Time: 18:55
+7. Message:
+
+175, KI7LAG, VARA FM, W7BVT-10, 140.020, Beaverton, Washington, OR
+
+170th Ave and Lisa Ct.: 45.5165, -122.8523
+
+8. Approved by: George Ford
+8a. Position/Title: N/A
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KI7MDE">
+            <p class="checkin-sentence">
+                175, KI7MDE, VARA FM, W7BVT-10, 145.020, Tualatin, Clackamas, OR
+            </p>
+            <a href="./images/KI7MDE.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez / Traffic Analyst, Planning Section
+3. From (Name and Position): George Ford / ODOT supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-04
+6. Time: 15:49
+7. Message:
+
+175, KI7MDE, VARA FM, W7BVT-10, 145.020, Tualatin, Clackamas, OR
+
+Borland Road and 56th Avenue: 45.3766, -122.7336
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KI7O">
+            <p class="broken-checkin">
+                175, KI7O, W7YAM-12, 145.090, Clarkes, Clackamas, Oregon
+            </p>
+            <p class="under-review">Mode missing from check-in sentence.</p>
+            <p class="under-review">Some additional characters in section 8a (Wes?)</p>
+            <p class="under-review">PNG image file provided when JPEG file required.</p>
+            <a href="./images/KI7O.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net No. 175
+2. To (Name and Position): Jessica Gonzalez / Traffic Control Analyst, Planning Section
+3. From (Name and Position): George Ford / ODOT Supervisor
+4. Subject: CARES Winlink Net No. 175
+5. Date: 2026-03-07
+6. Time: 13:36
+7. Message:
+
+175, KI7O, W7YAM-12, 145.090, Clarkes, Clackamas, Oregon
+
+West Main Street and Molalla Avenue: 45.1475, -122.5771
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT SupervisorWes
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KI7QIB">
+            <p class="broken-checkin">
+                175, VARA FM, W7BVT-10, 145.020, PORTLAND, MULTNOMAH, OR
+            </p>
+            <p class="under-review">FCC callsign missing in check-in sentence</p>
+            <a href="./images/KI7QIB.jpg" target="_blank">Open supplied map image in a separate tab</a>
+
+                <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez/ Planning Section/ Traffic Control Analyst
+3. From (Name and Position): George Ford/ ODOT Supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-04
+6. Time: 09:36
+7. Message:
+
+175, VARA FM, W7BVT-10, 145.020, PORTLAND, MULTNOMAH, OR
+
+SE Steele St. and Cesar E. Chavez Blvd.: 45.4847, -122.6227
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KJ7JCR">
+            <p class="checkin-sentence">
+                175, KJ7JCR, VARA FM, WC7EOC-10, 144.980, Lake Oswego, Clackamas, Oregon
+            </p>
+            <a href="./images/KJ7JCR.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez / traffic control analyst, planning section
+3. From (Name and Position): George Ford / ODOT supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-06
+6. Time: 15:38
+7. Message:
+
+175, KJ7JCR, VARA FM, WC7EOC-10, 144.980, Lake Oswego, Clackamas, Oregon
+
+Jean Road and Bryant Road: 45.3971, -122.7230
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KJ7MLK">
+            <p class="broken-checkin">
+                175, KJ7MLK, VARA FM, KD7ZDO-11, 145.770, Milwaukie, Clackamas, Oregon
+            </p>
+            <p class="under-review">Tactical address not used. There was a resend - so double RF time consumed.</p>
+            <p class="under-review">Image provided is not a map.</p>
+            <a href="./images/KJ7MLK.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez, Traffic Control Analyst
+3. From (Name and Position): George Ford, ODOT Supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-08
+6. Time: 04:29
+7. Message:
+
+175, KJ7MLK, VARA FM, KD7ZDO-11, 145.770, Milwaukie, Clackamas, Oregon
+
+King Road and Bell Ave. 45.4481, -122.5929
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KK6OTP">
+            <p class="checkin-sentence">
+                175, KK6OTP, VARA FM, KD7ZDO-12, 441.525, Wilsonville, Clackamas, OR
+            </p>
+            <a href="./images/KK6OTP.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez / Traffic Control Analyst - Planning
+3. From (Name and Position): George Ford / Supervisor.- ODOT
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-08
+6. Time: 20:07
+7. Message:
+
+175, KK6OTP, VARA FM, KD7ZDO-12, 441.525, Wilsonville, Clackamas, OR
+
+Town Center Loop E and SW Canyon Creek Rd: 45.3093, -122.7615
+
+8. Approved by: George Ford
+8a. Position/Title: Supervisor.- ODOT
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KK7MLS">
+            <p class="checkin-sentence">
+                175, KK7MLS, VARA FM, W7BVT-10, 145.020, Lake Oswego, Clackamas, Oregon
+            </p>
+            <a href="./images/KK7MLS.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez, Traffic Control Analyst / Planning Section
+3. From (Name and Position): George Ford, ODOT Supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-08
+6. Time: 20:56
+7. Message:
+
+175, KK7MLS, VARA FM, W7BVT-10, 145.020, Lake Oswego, Clackamas, Oregon
+
+Traffic Light Location (map attached): Kruse Way and Westlake Drive/Kruse Woods Drive 45.4190, -122.7320
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_KK7ZTC">
+            <p class="broken-checkin">
+                175, KK7ZTC, VARA FM, N1ACW-10, 145.530, LAKE OSWEGO, CLACKAMAS, OREGON
+            </p>
+            <p class="under-review">Too many decimal places for lat/long. Four d.p. was specified.</p>
+            <a href="./images/KK7ZTC.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez / Traffic Control Analyst, Planning Section
+3. From (Name and Position): George Ford / ODOT Supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-08
+6. Time: 20:35
+7. Message:
+
+175, KK7ZTC, VARA FM, N1ACW-10, 145.530, LAKE OSWEGO, CLACKAMAS, OREGON
+
+Pilkington Road and Jean Road: 45.39707, -122.73342.
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_W6RKT">
+            <p class="checkin-sentence">
+                175, W6RKT, VARA FM, N1ACW-10, 145.530, Battle Ground, Clark, WA</p>
+            <p class="broken-checkin">
+                175, W6RKT, VARA FM, KI7QIB-10, 145.010, Battle Ground, Clark, WA
+            </p>
+            <p class="under-review">Satellite view provided for map.</p>
+            <p>
+            <a href="./images/W6RKT.jpg" target="_blank">Open supplied map image in a separate tab</a>
+            </p>
+            <p>
+            <a href="./images/W6RKT-corrected.jpg" target="_blank">Open (corrected) map image in a separate tab</a>
+            </p>
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez / traffic control analyst, planning
+3. From (Name and Position): George Ford / ODOT supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-08
+6. Time: 19:58
+7. Message:
+
+175, W6RKT, VARA FM, KI7QIB-10, 145.010, Battle Ground, Clark, WA
+
+INTERSECTION INFORMATION:
+NW 10th Avenue (HWY 503) and NW Onsdorff
+45.7916, -122.5475
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT supervisor
+            </pre>
+        </div>
+        <div class="auxc-checkin" id="AUXC_W7CRI">
+            <p class="checkin-sentence">
+                175, W7CRI, VARA FM, KD7ZDO-12, 441.525, WILSONVILLE, CLACKAMAS, OREGON
+            </p>
+            <a href="./images/W7CRI.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez / Traffic Control Analyst
+3. From (Name and Position): George Ford / ODOT Supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-09
+6. Time: 23:53
+7. Message:
+
+175, W7CRI, VARA FM, KD7ZDO-12, 441.525, WILSONVILLE, CLACKAMAS, OREGON
+
+SW Wilsonville Rd and SW Brown Rd: 45.3023, -122.7860
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_W7TEE">
+            <p class="checkin-sentence">
+                175, W7TEE/M, TELNET, STARLINK, 0.000, PUYALLUP, PIERCE, WASHINGTON
+            </p>
+            <a href="./images/W7TEE.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net No.175
+2. To (Name and Position): Jessica Gonzalez/Traffic Control Analyst
+3. From (Name and Position): George Ford/ODOT Supervisor
+4. Subject: CARES Winlink Net No.175
+5. Date: 2026-03-07
+6. Time: 08:54
+7. Message:
+
+175, W7TEE/M, TELNET, STARLINK, 0.000, PUYALLUP, PIERCE, WASHINGTON
+
+7th Ave SE and S Meridian
+47.1862, -122.2937
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_WA6ZLV">
+            <p class="checkin-sentence">
+                175, WA6ZLV, VARA FM, N1ACW-10, 145.530, Lake Oswego, Clackamas, Oregon
+            </p>
+            <a href="./images/WA6ZLV.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net No. 175
+2. To (Name and Position): Jessica Gonzalez/Traffic Control Analyst/Planning Section
+3. From (Name and Position): George Ford/ODOT Supervisor
+4. Subject: CARES Winlink Net No.175
+5. Date: 2026-03-08
+6. Time: 14:35
+7. Message:
+
+175, WA6ZLV, VARA FM, N1ACW-10, 145.530, Lake Oswego, Clackamas, Oregon
+
+South State Street and Wilbur Street/Middlecrest Road: 45.4130, -122.6643
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+
+        <div class="auxc-checkin" id="AUXC_WW7OR">
+            <p class="broken-checkin">
+                175, WW7LO, VARA FM, N1ACW-10, 145.530, Lake Oswego, Clackamas, Oregon
+            </p>
+            <p class="under-review">Wrong FCC callsign</p>
+            <a href="./images/WW7OR.jpg" target="_blank">Open supplied map image in a separate tab</a>
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net No. 175
+2. To (Name and Position): Jessica Gonzalez / traffic control analyst - planning sect.
+3. From (Name and Position): George Ford / ODOT Supervisor
+4. Subject: CARES Winlink Net No. 175
+5. Date: 2026-03-04
+6. Time: 11:05
+7. Message:
+175, WW7LO, VARA FM, N1ACW-10, 145.530, Lake Oswego, Clackamas, Oregon
+
+A traffic light controlled intersection of Bryant Road and Jean Road in Lake Oswego.
+45.3971, -122.7139
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+            </pre>
+        </div>
+        <div class="auxc-checkin" id="AUXC_N1ACW">
+            <p class="checkin-sentence">
+                175, N1ACW/M, VARA FM, KD7ZDO-11, 145.770, Skylands, Clackamas, Oregon
+            </p>
+            <p class="checkin-sentence">
+                175, N1ACW/M, VARA FM, KD7ZDO-12, 441.525, Skylands, Clackamas, Oregon
+            </p>
+            <a href="./images/N1ACW.jpg" target="_blank">Open supplied map image in a separate tab</a>
+        
+            <p><strong>Message text:</strong></p>
+            <pre>
+** THIS IS AN EXERCISE **
+1. Incident Name: CARES Winlink Net no. 175
+2. To (Name and Position): Jessica Gonzalez /Traffic Control Analyst, Planning Section
+3. From (Name and Position): George Ford / ODOT Supervisor
+4. Subject: CARES Winlink Net no. 175
+5. Date: 2026-03-09
+6. Time: 10:45
+7. Message:
+
+175, N1ACW/M, VARA FM, KD7ZDO-12, 441.525, Skylands, Clackamas, Oregon
+
+Willamette Drive (also known as Oregon Highway 43) and Marylhurst Drive
+Coordinates of intersection (latitude/longitude): 45.3917, -122.6464
+
+8. Approved by: George Ford
+8a. Position/Title: ODOT Supervisor
+        
+            </pre>
+        </div>
+    </body>
+</html>
